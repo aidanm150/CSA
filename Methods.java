@@ -1,12 +1,12 @@
 public class Methods {
     public static void main(String [] args){
-        method1(x:5);
-        method(x:92);
-        int r1 = method2(name:"Arjun", x:7);
+        method1(5);
+        method1(92);
+        int r1 = method2("Arjun", 7);
         System.out.println(r1);
-        int r2 = method2(name:"Serena", x:8);
+        int r2 = method2("Serena", 8);
         System.out.println(r2);
-        System.out.println(method3(4,5,5));
+        System.out.println((4,5,5));
         // int r3 = method3(4, 5.5)
         // System.out.println(r3);
 
