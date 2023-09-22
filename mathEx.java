@@ -8,6 +8,10 @@ public class mathEx {
 
         int swapped3 = swap(1042);
         System.out.println(swapped3);
+
+        timeLeft(1,34,8,20);
+
+        timeLeft(1,15,4,36);
     }
 
     public static int swap(int x){
@@ -19,10 +23,15 @@ public class mathEx {
         return k;
     }
 
-    public static int timeLeft(int curHour,int curMin,int depHour,int depMin){
-        int th = depHour - curHour;
-        int tm = depMin - curMin;
-
-
+    public static void timeLeft(int curHour,int curMin,int depHour,int depMin){
+        int tHour = ((depHour*60)+depMin) - ((curHour*60)+curMin);
+        int tMin = tHour % 60;
+        int trHour = tHour / 60;
+        System.out.println(trHour+" Hours and "+tMin +" minutes.");
     }
+
+    public static int dayOfWeek(int dOfJanOne, int dOfMonth){
+        
+    }
+
 }
