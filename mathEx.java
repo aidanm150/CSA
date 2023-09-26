@@ -12,6 +12,18 @@ public class mathEx {
         timeLeft(1,34,8,20);
 
         timeLeft(1,15,4,36);
+
+        int dayOne = dayOfWeek(0, 1);
+        System.out.println(dayOne);
+
+        int dayTwo = dayOfWeek(0,14);
+        System.out.println(dayTwo);
+
+        int dayThree = dayOfWeek(6,22);
+        System.out.println(dayThree);
+
+        int dayFour = dayOfWeek(5,4);
+        System.out.println(dayFour);
     }
 
     public static int swap(int x){
@@ -31,7 +43,8 @@ public class mathEx {
     }
 
     public static int dayOfWeek(int dOfJanOne, int dOfMonth){
-        
+        int weekNum = (dOfJanOne + dOfMonth - 1) % 7;
+        return weekNum;
     }
 
 }
