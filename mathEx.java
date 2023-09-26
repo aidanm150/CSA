@@ -24,6 +24,13 @@ public class mathEx {
 
         int dayFour = dayOfWeek(5,4);
         System.out.println(dayFour);
+
+        int dayFive = dayOfWeek(1,24);
+        System.out.println(dayFive);
+
+        int daySix = dayOfWeek(2,1);
+        System.out.println(daySix);
+
     }
 
     public static int swap(int x){
