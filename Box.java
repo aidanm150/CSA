@@ -53,6 +53,11 @@ public class Box{
         return s;      
     }
 
+    public boolean isTaller(Box other){
+        double h = other.getHeight();
+        if (height > h) return true;
+        return false;
+    }
     public static void main (String[] args){
         // create an instance
         Box b1 = new Box(6.5,8.3,9.4, "brown", false);
@@ -70,7 +75,8 @@ public class Box{
         System.out.println(b1);
         System.out.println(b2);
 
-        
+        boolean f = b1.isTaller(b3);
+        System.out.println(f);
 
     }
 
