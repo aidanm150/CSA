@@ -31,10 +31,23 @@ public class Box{
         hasALid = false;
     }
 
+    public double getHeight(){
+        return height;
+    } 
+
+    public void setHeight(double h){
+        if(h>0){
+            height = h;
+        }
+
+    }
     public static void main (String[] args){
         // create an instance
         Box b1 = new Box(6.5,8.3,9.4, "brown", false);
         Box b2 = new Box(3.6,2.8,7.4);
         Box b3 = new Box ();
+        b3.setHeight(5.3);
+        System.out.println(b3.getHeight());
+        System.out.println(b1.getHeight());
     }
 }
