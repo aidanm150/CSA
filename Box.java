@@ -41,6 +41,12 @@ public class Box{
         }
 
     }
+
+    public double volume(){
+        double v= length*width*height;
+        return v;
+    }
+
     public static void main (String[] args){
         // create an instance
         Box b1 = new Box(6.5,8.3,9.4, "brown", false);
@@ -49,5 +55,12 @@ public class Box{
         b3.setHeight(5.3);
         System.out.println(b3.getHeight());
         System.out.println(b1.getHeight());
+        double v1 = b1.volume();
+        System.out.println("The volume of box 1 "+v1);
+        double v2 = b2.volume();
+        System.out.println("The volume of box 2 "+v2);
+
     }
+
+
 }
