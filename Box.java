@@ -47,6 +47,12 @@ public class Box{
         return v;
     }
 
+    public String toString(){
+        String s = "A box with dimensions " + length + " " + width + " " + height;
+        s+= "\nColor is " + color + ". has a lid? " + hasALid;
+        return s;      
+    }
+
     public static void main (String[] args){
         // create an instance
         Box b1 = new Box(6.5,8.3,9.4, "brown", false);
@@ -59,6 +65,12 @@ public class Box{
         System.out.println("The volume of box 1 "+v1);
         double v2 = b2.volume();
         System.out.println("The volume of box 2 "+v2);
+
+        // print the box
+        System.out.println(b1);
+        System.out.println(b2);
+
+        
 
     }
 
