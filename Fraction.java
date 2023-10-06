@@ -41,7 +41,7 @@ public class Fraction {
 	}
 	
 	public Fraction multiply(Fraction other){
-		int n = this.numerator*other.denominator * this.denominator*other.numerator;
+		int n = this.numerator*other.numerator;
 		int d = this.denominator * other.getDenom();
 
 		Fraction result = new Fraction(n,d);
@@ -77,7 +77,7 @@ public class Fraction {
 		System.out.println(f1 + "*" + f2 + "="+ f5);
 		
 		Fraction f6 = f1.reciprocal();
-		System.out.println(f1 + "flipped, turns into " + f6);
+		System.out.println(f1 + " flipped, turns into " + f6);
 		
 		Fraction f7 = new Fraction(4,5);
 		Fraction f8 = new Fraction(6,7);
