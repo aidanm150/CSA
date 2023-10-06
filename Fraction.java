@@ -1,4 +1,5 @@
-public class Fraction {
+public class Fraction  git config --global user.email "you@example.com"
+git config --global user.name "Your Name" {
 	private int numerator;		//attributes
 	private int denominator;
 	
