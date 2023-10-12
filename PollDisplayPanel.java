@@ -49,7 +49,7 @@ public class PollDisplayPanel extends JPanel
   public String toString()
   {
 	// create a string here that looks like: Tam1 : 1 Brian : 2 Liz : 0
-    String s = 1 + "Tam : " + 1 + "Brian : " + 2 + "Liz : " + 0;
+    String s = "Tam " + count1 + ":" + count2 + " Brian" + ":" + "Liz " + count3 + ":" + 0;
     return  s;
   }
 
@@ -89,9 +89,6 @@ public class PollDisplayPanel extends JPanel
       degrees = countToDegrees(count1, total);
       drawSector(g, x, y, r, fromDegree, degrees);
 
-      //_________________________________________________
-
-      //...
     }
     else
     {
