@@ -11,8 +11,8 @@ import javax.swing.JPanel;
 public class PollDisplayPanel extends JPanel
 {
   private String name1, name2, name3;
-  int count1 = 1;
-  int count2 = 2;
+  int count1 = 0;
+  int count2 = 0;
   int count3 = 0;
 
   // Constructor
@@ -22,8 +22,8 @@ public class PollDisplayPanel extends JPanel
     name1 = nm1;
     name2 = nm2;
     name3 = nm3;
-    count1 = 0;   // optional
-    count2 = 0;   // optional
+    count1 = 1;   // optional
+    count2 = 2;   // optional
     count3 = 0;   // optional
   }
 
@@ -92,15 +92,15 @@ public class PollDisplayPanel extends JPanel
 
       int degrees2;
       g.setColor(Color.GREEN);
-      int fromDegree2 = fromDegree + degrees;
+      fromDegree += degrees;
       degrees2 = countToDegrees(count2, total);
-      drawSector(g,x,y,r,fromDegree2, degrees2);
+      drawSector(g,x,y,r,fromDegree, degrees2);
 
       int degrees3;
       g.setColor(Color.BLUE);
-      int fromDegree3 = fromDegree2 + degrees2;
+      fromDegree += degrees2;
       degrees3 = countToDegrees(count3, total);
-      drawSector(g,x,y,r, fromDegree3, degrees3);
+      drawSector(g,x,y,r, fromDegree, degrees3);
 
     }
     else
