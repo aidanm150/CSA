@@ -91,12 +91,16 @@ public class PollDisplayPanel extends JPanel
       drawSector(g, x, y, r, fromDegree, degrees);
 
       int degrees2;
+      g.setColor(Color.GREEN);
+      int fromDegree2 = fromDegree + degrees;
       degrees2 = countToDegrees(count2, total);
-      drawSector(g,x,y,r,fromDegree, degrees2);
+      drawSector(g,x,y,r,fromDegree2, degrees2);
 
       int degrees3;
+      g.setColor(Color.BLUE);
+      int fromDegree3 = fromDegree2 + degrees2;
       degrees3 = countToDegrees(count3, total);
-      drawSector(g,x,y,r,fromDegree, degrees3);
+      drawSector(g,x,y,r, fromDegree3, degrees3);
 
     }
     else
