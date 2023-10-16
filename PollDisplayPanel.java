@@ -11,9 +11,9 @@ import javax.swing.JPanel;
 public class PollDisplayPanel extends JPanel
 {
   private String name1, name2, name3;
-  int count1 = 0;
-  int count2 = 1;
-  int count3 = 2;
+  int count1 = 1;
+  int count2 = 5;
+  int count3 = 11;
 
   // Constructor
   public PollDisplayPanel(String nm1, String nm2, String nm3)
@@ -22,9 +22,9 @@ public class PollDisplayPanel extends JPanel
     name1 = nm1;
     name2 = nm2;
     name3 = nm3;
-    count1 = 0;   // optional
-    count2 = 0;   // optional
-    count3 = 0;   // optional
+    count1 = 1;   // optional
+    count2 = 5;   // optional
+    count3 = 11;   // optional
   }
 
   // Increments count1
@@ -104,11 +104,11 @@ public class PollDisplayPanel extends JPanel
     y += (r + 20);
     g.setColor(Color.BLACK);
 
-    //g.drawString( _______________ , x - r, y);
+    g.drawString( name1 , x - r, y);
 
-    //g.drawString( _______________ , x, y);
+    g.drawString( name2 , x, y);
 
-    //g.drawString( _______________ , x + r, y);
+    g.drawString( name3 , x + r, y);
 
 
     // Display the color squares:
