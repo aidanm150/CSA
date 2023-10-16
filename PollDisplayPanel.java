@@ -12,8 +12,8 @@ public class PollDisplayPanel extends JPanel
 {
   private String name1, name2, name3;
   int count1 = 1;
-  int count2 = 5;
-  int count3 = 11;
+  int count2 = 2;
+  int count3 = 0;
 
   // Constructor
   public PollDisplayPanel(String nm1, String nm2, String nm3)
@@ -22,9 +22,9 @@ public class PollDisplayPanel extends JPanel
     name1 = nm1;
     name2 = nm2;
     name3 = nm3;
-    count1 = 1;   // optional
-    count2 = 5;   // optional
-    count3 = 11;   // optional
+    count1 = 0;   // optional
+    count2 = 0;   // optional
+    count3 = 0;   // optional
   }
 
   // Increments count1
@@ -49,7 +49,7 @@ public class PollDisplayPanel extends JPanel
   public String toString()
   {
 	// create a string here that looks like: Tam1 : 1 Brian : 2 Liz : 0
-    String s = "Tam " + count1 + ":" + count2 + " Brian" + ":" + "Liz " + count3 + ":" + 0;
+    String s = name1 + count1 + " : " + name2 + count2 + " : " + name3 + count3;
     return  s;
   }
 
@@ -79,6 +79,7 @@ public class PollDisplayPanel extends JPanel
   //    for example, count1 = 5, count2 = 11, count3 = 0.)
   private void drawPieChart(Graphics g, int x, int y, int r)
   {
+    
     int total = count1 + count2 + count3;
     int fromDegree = 0;
 
@@ -88,6 +89,14 @@ public class PollDisplayPanel extends JPanel
       g.setColor(Color.RED);
       degrees = countToDegrees(count1, total);
       drawSector(g, x, y, r, fromDegree, degrees);
+
+      int degrees2;
+      degrees2 = countToDegrees(count2, total);
+      drawSector(g,x,y,r,fromDegree, degrees2);
+
+      int degrees3;
+      degrees3 = countToDegrees(count3, total);
+      drawSector(g,x,y,r,fromDegree, degrees3);
 
     }
     else
@@ -144,8 +153,7 @@ public class PollDisplayPanel extends JPanel
 
   public static void main(String[] args)
   {
-	PollDisplayPanel votingMachine = 
-		new PollDisplayPanel("Tami","Brian","Liz");
+	PollDisplayPanel votingMachine = new PollDisplayPanel("Tami","Brian","Liz");
 	votingMachine.vote1();
 	votingMachine.vote2();
 	votingMachine.vote2();
