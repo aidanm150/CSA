@@ -13,21 +13,29 @@ public class Line {
 		end1 = new Point();
 		end2 = new Point();
 	}
-	/*
+	
 	public double distance()
 	{
 		//You may find Math.pow(base, power) and Math.sqrt(num) useful
+		double xTotal = (end2.getY()-end1.getY());
+		double yTotal = (end2.getX()-end1.getX());
+		double d = Math.sqrt((Math.pow(xTotal , 2.0))+(Math.pow(yTotal, 2.0)));
+		return d;
 	}
 	public Point midpoint()
 	{
-		
+		double mpx = (end1.getX() + end2.getX())/2;
+		double mpy = (end1.getY() + end2.getY())/2;
+		Point mp = new Point(mpx,mpy);
+		return mp;
 	}
 	
 	public boolean sameLength(Line otherLine)
 	{
-		
+		double d1 = this.distance();
+		double d2 = otherLine.distance();
+		return Math.abs(d1-d2) <= .001;
 	}
-	*/
 	public double slope()
 	{
 		double m;
@@ -67,14 +75,14 @@ public class Line {
 		System.out.println("Parallel? " + l1.parallel(l2));
 		
 		
-		//double dist = l1.distance();
-		//Point p1 = l1.midpoint();
+		double dist = l1.distance();
+		Point p1 = l1.midpoint();
 		
-		//System.out.println("distance = " + dist);
-		//System.out.println("Midpoint = " + p1);
+		System.out.println("distance = " + dist);
+		System.out.println("Midpoint = " + p1);
 		
-		//System.out.println("distance = " + l2.distance());
-		//System.out.println("Same length? " + l1.sameLength(l2));
+		System.out.println("distance = " + l2.distance());
+		System.out.println("Same length? " + l1.sameLength(l2));
 
 	}
 
