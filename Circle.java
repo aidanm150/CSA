@@ -1,8 +1,8 @@
 public class Circle {
     private double radius;
     
-    public Circle(double radius){
-        
+    public Circle(double x){
+        x = radius;
     }
 
     public double area(){
@@ -12,5 +12,6 @@ public class Circle {
 
     public double circumference(){
         double circumference = 2 * Math.PI * radius;
+        return circumference;
     }
 }
