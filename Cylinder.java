@@ -9,12 +9,12 @@ public class Cylinder {
     }
 
     public double vol(){
-        double v = Math.PI * Math.pow(circle1.getRadius(),2.0);
+        double v = Math.PI * Math.pow(2.0,circle1.getRadius());
         return v;
     }
 
     public double sa(){
-        double a = 2 * Math.PI * circle1.getRadius() * height + 2 * Math.PI * Math.pow(circle1.getRadius(),2.0);
+        double a = 2 * Math.PI * circle1.getRadius() * height + 2 * Math.PI * Math.pow(2.0,circle1.getRadius());
         return a;
     }
 
