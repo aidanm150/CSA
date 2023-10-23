@@ -2,11 +2,10 @@ public class Cylinder {
 
     public Circle circle1;
     public double height;
-    private double h;
 
     public Cylinder(double r , double h){
         this.circle1 = new Circle(r);
-        this.h = height;
+        h = height;
     }
 
     public double vol(){

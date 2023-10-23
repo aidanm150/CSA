@@ -1,9 +1,8 @@
 public class Circle {
     private double radius;
-    private double x;
     
     public Circle(double x){
-        this.x = radius;
+        this.radius = x;
     }
 
     public double area(){
@@ -17,6 +16,6 @@ public class Circle {
     }
 
     public double getRadius(){
-        return x;
+        return radius;
     }
 }
