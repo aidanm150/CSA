@@ -58,6 +58,35 @@ public class Conditionals {
             }
         }
     }
+    
+    public boolean onesDigitSame(int a, int b, int c){
+        int a1 = a%10;
+        int b1 = b%10;
+        int c1 = c%10;
+        if(a1==b1||a1==c1||b1==c1){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public int blackjack(int x, int y){
+        if(x<=21||y<=21){
+            if(x!>21){
+                
+            }
+            if(x>y){
+                return x;
+            }
+            else{
+                return y;
+            }
+        }
+        else{
+            return 0;
+        }
+    }
 
     public static void main(String [] args){
         Conditionals x = new Conditionals();
@@ -74,6 +103,14 @@ public class Conditionals {
         System.out.println(x.pickUpPhone(true, true, false));
         System.out.println(x.pickUpPhone(true,false,false));
         System.out.println(x.pickUpPhone(true, true, true));
+        System.out.println("onesDigitSame Method");
+        System.out.println(x.onesDigitSame(12, 22, 32));
+        System.out.println(x.onesDigitSame(11, 13, 12));
+        System.out.println(x.onesDigitSame(2, 2, 4));
+        System.out.println("Blackjack Method");
+        System.out.println(x.blackjack(19,21));
+        System.out.println(x.blackjack(21,19));
+        System.out.println(x.blackjack(22, 21));
     }
 
 }
