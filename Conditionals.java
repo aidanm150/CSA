@@ -73,20 +73,33 @@ public class Conditionals {
 
     public int blackjack(int x, int y){
         if(x<=21||y<=21){
-            if(x!>21){
-                
-            }
-            if(x>y){
-                return x;
+            if(y<=21&&x<=21){
+                if(x<y){
+                    return y;
+                }
+                else{
+                    return x;
+                }
             }
             else{
-                return y;
+                if(y<x && x<=21){
+                    return x;
+                }
+                else if(y>x&&y<=21){}
+                    return y;
+                }
             }
-        }
         else{
             return 0;
         }
-    }
+        }
+    //     else if(y<=21 && x<y){
+    //         return y;
+    //     }
+    //     else{
+    //         return 0;
+    //     }
+    // }
 
     public static void main(String [] args){
         Conditionals x = new Conditionals();
@@ -110,7 +123,11 @@ public class Conditionals {
         System.out.println("Blackjack Method");
         System.out.println(x.blackjack(19,21));
         System.out.println(x.blackjack(21,19));
-        System.out.println(x.blackjack(22, 21));
+        System.out.println(x.blackjack(19, 22));
+        System.out.println(x.blackjack(8, 8));
+        System.out.println(x.blackjack(25, 24));
+        System.out.println(x.blackjack(17, 9));
+        System.out.println(x.blackjack(12,18));
     }
 
 }
