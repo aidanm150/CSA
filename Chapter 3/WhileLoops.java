@@ -14,8 +14,19 @@ public class WhileLoops{
         return sum;
     }
 
+    public int sumDigits(int x){
+        int i = 10;
+        int sum=0;
+        while(x!=0){
+            x=x%i;
+            i = i*10;
+            sum=sum+x;
+        }
+        return sum;
+    }
     public static void main(String[] args){
         WhileLoops ab = new WhileLoops();
         System.out.println(ab.addOdds(8));
+        System.out.println(10/100);
     }
 }
