@@ -1,17 +1,4 @@
 public class WhileLoops{
-
-<<<<<<< HEAD
-    public static int addOdds(int n){
-        int sum=0;
-        while(n>1){
-            if(n%2==0){
-                n--;
-            }
-            else{
-                sum=+n;
-                n--;        
-            }
-=======
     public int addOdds(int n){
         int x = 1;
         int sum = 1;
@@ -19,26 +6,12 @@ public class WhileLoops{
         while(n>x){
             x+=2;
             sum+=x;
->>>>>>> 800cb1cde4b9403d370ca415887d5b0b526c8869
         }
         return sum;
     }
 
+
     public int sumDigits(int x){
-<<<<<<< HEAD
-        int i = 10;
-        int sum=0;
-        while(x!=0){
-            x=x%i;
-            i = i*10;
-            sum=sum+x;
-        }
-        return sum;
-    }
-    public static void main(String[] args){
-        System.out.println(addOdds(8));
-        System.out.println(10/100);
-=======
         int sum=0;
         int i = 0;
         while(x>0){
@@ -49,6 +22,7 @@ public class WhileLoops{
         return sum;
     }
 
+
     public int howManyYears(double startpop, double endpop){
         int years=0;
         while(startpop<endpop){
@@ -57,6 +31,7 @@ public class WhileLoops{
         }
         return years;
     }
+
 
     public void printSum(int x){
         int n = x;
@@ -73,6 +48,7 @@ public class WhileLoops{
         System.out.println(i + " = " + sum);
     }
 
+
     public boolean isPerfectSquare(int n){
         int one = 1;
         while(one<n){
@@ -85,7 +61,6 @@ public class WhileLoops{
             return false;
         }
     }
-
     public static void main(String[] args){
         WhileLoops ab = new WhileLoops();
         System.out.println("Add Odds");
@@ -106,6 +81,5 @@ public class WhileLoops{
         System.out.println(ab.isPerfectSquare(25));
         System.out.println(ab.isPerfectSquare(49));
         System.out.println(ab.isPerfectSquare(24));
->>>>>>> 800cb1cde4b9403d370ca415887d5b0b526c8869
     }
 }
