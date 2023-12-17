@@ -10,6 +10,7 @@ public class WhileLoops{
         return sum;
     }
 
+
     public int sumDigits(int x){
         int sum=0;
         int i = 0;
@@ -21,6 +22,7 @@ public class WhileLoops{
         return sum;
     }
 
+
     public int howManyYears(double startpop, double endpop){
         int years=0;
         while(startpop<endpop){
@@ -29,6 +31,7 @@ public class WhileLoops{
         }
         return years;
     }
+
 
     public void printSum(int x){
         int n = x;
@@ -44,6 +47,7 @@ public class WhileLoops{
         sum=sum+i;
         System.out.println(i + " = " + sum);
     }
+
 
     public boolean isPerfectSquare(int n){
         int one = 1;
@@ -77,5 +81,10 @@ public class WhileLoops{
         System.out.println(ab.isPerfectSquare(25));
         System.out.println(ab.isPerfectSquare(49));
         System.out.println(ab.isPerfectSquare(24));
+<<<<<<< HEAD
     } 
 }
+=======
+    }
+}
+>>>>>>> 3f3d7af03f55b7901fae2489a0024aa60133b20f
