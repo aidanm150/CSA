@@ -57,7 +57,6 @@ public class WhileLoops{
             return false;
         }
     }
-
     public static void main(String[] args){
         WhileLoops ab = new WhileLoops();
         System.out.println("Add Odds");
@@ -78,6 +77,5 @@ public class WhileLoops{
         System.out.println(ab.isPerfectSquare(25));
         System.out.println(ab.isPerfectSquare(49));
         System.out.println(ab.isPerfectSquare(24));
-    }
-
+    } 
 }
