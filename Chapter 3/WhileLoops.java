@@ -81,10 +81,5 @@ public class WhileLoops{
         System.out.println(ab.isPerfectSquare(25));
         System.out.println(ab.isPerfectSquare(49));
         System.out.println(ab.isPerfectSquare(24));
-<<<<<<< HEAD
     } 
 }
-=======
-    }
-}
->>>>>>> 3f3d7af03f55b7901fae2489a0024aa60133b20f
