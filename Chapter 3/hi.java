@@ -1,4 +1,4 @@
-public class hi {
+public class hi{
     private boolean IsEven(int presents){
         if(presents == 1||presents==3||presents==5||presents==7||presents==9||presents==11){
             return true;
