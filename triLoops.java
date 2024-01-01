@@ -27,15 +27,12 @@ public class triLoops{
         }
     }
     public void isosceles(int h){
-        for(int i=h;i>0;i--){
-            for(int g=i;g>1;g--){
+        for(int i=1;i<h;i++){
+            for(int g=h-1;g>=1;g--){
                 System.out.print(" ");
             }
-            for(int k=1;k>=i;k--){
+            for(int k=1;k<=i;k++){
                 System.out.print(k);
-            }
-            for(int j=i-1;j>0;j--){
-                System.out.print(j);
             }
             System.out.println();
         }
@@ -43,9 +40,9 @@ public class triLoops{
 
     public static void main(String args[]){
         triLoops ab = new triLoops();
-        // ab.eights();
-        // ab.alternate(6);
-        // ab.alternate(5);
+        ab.eights();
+        ab.alternate(6);
+        ab.alternate(5);
         ab.isosceles(6);
     }
 }
