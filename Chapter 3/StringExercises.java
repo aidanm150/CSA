@@ -70,21 +70,11 @@ public class StringExercises{
     }
 
     public static String removeTag(String m, String tag){
-        int mStart = m.indexOf(">");
-        int mEnd = m.lastIndexOf("<");
-        if(m.indexOf("/")<=mStart) return m;
-        if(m.indexOf(tag)==-1) return m;
-        if(mEnd>mStart){
-            String m1 = m.substring(mStart+1, mEnd);
-            return m1;
-        }
-        else if(mStart>mEnd){
-            String m1 = m.substring(0,mEnd+1);
-            return m1;
-        }
-        else{
-            return m;
-        }
+        int mStart = m.indexOf(">")+1;
+        int mEnd = m.lastIndexOf("/"+tag)-1; 
+        if(mStart==-1||mEnd<mStart) return m;
+        String s = m.substring(mStart, mEnd);
+        return s;
     }
 
     public static void main(String args[]){
