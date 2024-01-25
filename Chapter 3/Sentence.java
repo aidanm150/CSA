@@ -15,8 +15,10 @@ public class Sentence {
      */
     public int findNthTime(String str, int n){
         if(str.length()<=0 && n<=0) return -1;
+        String s2 = currSent.substring(0,n);
+        int k = s2.length();
         String s1 = currSent.substring(n);
-        int s = s1.indexOf(str);
+        int s = s1.indexOf(str)+k;
         return s;
     }
  
@@ -30,7 +32,7 @@ public class Sentence {
         if(str.length()>0 && n>0 && s!=-1){
             int k = str.length();
             int u = currSent.length();
-            String s1 = currSent.substring(0,s+1);
+            String s1 = currSent.substring(0,s);
             int j = s1.length();
             String s3 = currSent.substring((j+k),u);
             s1+=repl;
@@ -47,6 +49,7 @@ public class Sentence {
     public int findLastTime(String str){
         if(str.length()<=0) return -1;
         int k = currSent.lastIndexOf(str);
+        if(k==-1) return -1;
         int c = findNthTime(str, k);
         return c;
     }
