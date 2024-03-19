@@ -70,13 +70,17 @@ public class NitalTester {
      */
     public static boolean isNital(int[][] square){
         boolean check = true;
-        for(int row = 0; row<square.length-1;row++){
-            if(hasAllValues(square[row], square[row+1])==false){
+        for(int row = 0; row<square.length;row++){
+            if(hasAllValues(square[0], square[row])==false){
                 check = false;
             }
-        }
-        for(int row = 0; row<square.length;row++){
+            if(hasAllValues(getColumn(square, 0),getColumn(square, row))==false){
+                check = false;
+            }
             if(containsRepeats(square[row])==true){
+                check = false;
+            }
+            if(containsRepeats(getColumn(square, row))==true){
                 check = false;
             }
         }
@@ -89,7 +93,7 @@ public class NitalTester {
         int[][] n3 = {{1,2,1},{2,1,1},{1,1,2}};
         int[][] n4 = {{1,2,3},{3,1,2},{7,8,9}};
         int[][] n5 = {{1,2},{1,2}};
-	int[][] n6 = {{1,1},{2,2}};
+	    int[][] n6 = {{1,1},{2,2}};
 
         System.out.println(Arrays.toString(getColumn(n1, 2)));
         System.out.println(Arrays.toString(getColumn(n4, 0)));
@@ -99,7 +103,7 @@ public class NitalTester {
         System.out.println(isNital(n3));
         System.out.println(isNital(n4));
         System.out.println(isNital(n5));
-	System.out.println(isNital(n6));
+	    System.out.println(isNital(n6));
 		
 
 
